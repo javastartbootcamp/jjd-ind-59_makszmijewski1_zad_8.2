@@ -1,7 +1,11 @@
 package pl.javastart.task;
 
 public class Ticket {
-    private static int COUNTER = 1;
+    public static final String TYPE_INTERNET = "bilet internetowy";
+    public static final String TYPE_STANDARD = "bilet standardowy";
+    public static final String TYPE_GIFT = "bilet prezentowy";
+
+    private static int counter = 1;
     private String eventName;
     private Adress adress;
     private String ticketType;
@@ -15,8 +19,8 @@ public class Ticket {
         this.ticketType = ticketType;
         this.basicPrice = basicPrice;
         this.discount = discount;
-        this.idNumber = COUNTER;
-        COUNTER++;
+        this.idNumber = counter;
+        counter++;
     }
 
     public double getBasicPrice() {
